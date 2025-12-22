@@ -80,3 +80,84 @@ body {
 .link:hover {
   text-decoration: underline;
 }
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: clamp(12rem, 14rem, 16rem);
+  margin: 0rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #ffffffd9;
+  background-color: #1e1e1e;
+  border: 0.1rem solid #ffffff26;
+  box-shadow: 0 0.25rem 1.5rem #000000cc;
+}
+
+.form-row-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.115rem;
+}
+
+.form-row-control input {
+  padding: 0.15rem 0rem;
+  border-radius: 0.125rem;
+  background-color: #ffffff26;
+  border: none;
+}
+
+.form-row-control input:focus {
+  outline: 0.05rem solid #ffffffd9;
+}
+
+.message-form button {
+  margin: 0.25rem 0rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 1rem;
+  color: #ffffffd9;
+  border-radius: 0.25rem;
+  background-color: #4da3ff;
+  border: none;
+}
+
+.message-form button:hover {
+  background-color: rgba(77, 163, 255, 0.85);
+  cursor: pointer;
+}
+
+.message-form-link,
+.list-item-link {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #4da3ff;
+}
+
+.message-form-link:hover,
+.list-item-link {
+  text-decoration: underline;
+}
+
+.list-item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(18rem, 20rem, 22rem);
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  color: #ffffff66;
+  background-color: #1e1e1e;
+  border: 0.1rem solid #ffffff26;
+  box-shadow: 0 0.25rem 1.5rem #000000cc;
+}
+
+.list-item-details p {
+  font-size: 1.25rem;
+  color: #ffffffbf;
+}

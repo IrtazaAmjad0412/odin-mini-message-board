@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p><strong>Author:</strong> <%= message.user %></p>
-    <p><strong>Message:</strong> <%= message.text %></p>
-    <p>
-      <small><strong>Added:</strong> <%= message.added.toDateString() %></small>
-    </p>
-    <a href="/">Back to all messages</a>
+    <h1 class="heading-one"><%= title %></h1>
+    <div class="list-item-details">
+      <p>Author: <%= message.user %></p>
+      <p>Message: <%= message.text %></p>
+      <p>Added: <%= message.added.toDateString() %></p>
+    </div>
+    <a href="/" class="list-item-link">Back to all messages</a>
   </body>
 </html>

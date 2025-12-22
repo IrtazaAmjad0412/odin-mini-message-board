@@ -4,20 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <form method="POST" action="/new">
-      <div>
-        <label for="user">Name</label>
+    <h1 class="heading-one"><%= title %></h1>
+    <form method="POST" action="/new" class="message-form">
+      <div class="form-row-control">
+        <label for="user">Name:</label>
         <input type="text" id="user" name="messageUser" required />
       </div>
-      <div>
-        <label for="text">Message</label>
+      <div class="form-row-control">
+        <label for="text">Message:</label>
         <input type="text" id="text" name="messageText" required />
       </div>
       <button type="submit">Send</button>
     </form>
-    <a href="/">Back</a>
+    <a href="/" class="message-form-link">Back</a>
   </body>
 </html>
