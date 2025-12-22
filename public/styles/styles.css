@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000df;
+  font-family: "Roboto", sans-serif;
+}
+
+.heading-one {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 2rem 2rem;
+  font-size: 2rem;
+  color: #ffffffd9;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 1rem 10rem 2rem 10rem;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: clamp(9rem, 11rem, 13rem);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  list-style: none;
+  color: #ffffff66;
+  background-color: #1e1e1e;
+  border: 0.1rem solid #ffffff26;
+  box-shadow: 0 0.25rem 1.5rem #000000cc;
+  transition: transform 0.2s ease-out;
+}
+
+.list-item:hover {
+  transform: translateY(-0.4rem);
+}
+
+.list-item h2,
+.list-item p {
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-item h2 {
+  font-size: 1.5rem;
+  color: #ffffffd9;
+}
+
+.list-item a {
+  padding: 0.25rem 0rem 0rem 0rem;
+  text-decoration: none;
+  color: #4da3ff;
+}
+
+.list-item a:hover {
+  text-decoration: underline;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  text-decoration: none;
+  color: #4da3ff;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
