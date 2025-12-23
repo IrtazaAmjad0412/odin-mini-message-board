@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   background-color: #000000df;
-  font-family: "Roboto", sans-serif;
 }
 
 .heading-one {
@@ -65,6 +65,18 @@ body {
 }
 
 .list-item a:hover {
+  text-decoration: underline;
+}
+
+.list-item button {
+  font-size: 1rem;
+  color: #ff4d4d;
+  background-color: #1e1e1e;
+  border: none;
+  cursor: pointer;
+}
+
+.list-item button:hover {
   text-decoration: underline;
 }
 

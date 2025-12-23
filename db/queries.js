@@ -7,7 +7,7 @@ export const getAllMessages = async () => {
   return rows;
 };
 
-export const getOneMessage = async (id) => {
+export const getMessageByID = async (id) => {
   const { rows } = await pool.query(
     'SELECT id, text, "user", added FROM messages WHERE id = $1',
     [id]
@@ -21,3 +21,12 @@ export const insertMessage = async (messageText, messageUser) =>
     messageText,
     messageUser,
   ]);
+
+export const deleteMessageById = async (id) => {
+  const { rows } = await pool.query(
+    'DELETE FROM messages WHERE id = $1 RETURNING id, text, "user", added',
+    [id]
+  );
+  const message = rows[0];
+  return message;
+};

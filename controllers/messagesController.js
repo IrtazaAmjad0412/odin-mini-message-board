@@ -1,4 +1,9 @@
-import { getAllMessages, getOneMessage, insertMessage } from "../db/queries.js";
+import {
+  getAllMessages,
+  getMessageByID,
+  insertMessage,
+  deleteMessageById,
+} from "../db/queries.js";
 
 export const getAndShowMessageList = async (req, res) => {
   try {
@@ -22,7 +27,7 @@ export const showMessageForm = (req, res) => {
 export const showMessageDetails = async (req, res) => {
   try {
     const id = Number(req.params.id);
-    const message = await getOneMessage(id);
+    const message = await getMessageByID(id);
     if (!message) {
       return res.status(404).send("Message not found!");
     }
@@ -40,6 +45,20 @@ export const createMessage = async (req, res) => {
       return res.status(400).send("Both user and message are required");
     }
     await insertMessage(messageText, messageUser);
+    res.redirect("/");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Server error");
+  }
+};
+
+export const deleteMessage = async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    const deletedMessage = await deleteMessageById(id);
+    if (!deletedMessage) {
+      return res.status(404).send("Message not found!");
+    }
     res.redirect("/");
   } catch (err) {
     console.error(err);
